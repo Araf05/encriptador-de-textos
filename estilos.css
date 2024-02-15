@@ -28,6 +28,19 @@ input{
     color: var(--color-primario);
 }
 
-.btn{
-    
+button{
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 16px;
+    border: 1px solid var(--color-primario);
+}
+
+.encriptar{
+    background: var(--color-primario);
+    color: var(--color-claro);
+}
+
+.desencriptar{
+    background: var(--color-secundario);
+    color: var(--color-primario);
 }
