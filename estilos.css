@@ -4,7 +4,8 @@
     --color-primario: #0A3871;
     --color-secundario: #D8DFE8;
     --color-background: #F3F5FC;
-    --color-claro: #E8E8E8;;
+    --color-blanco: #ffffff;
+    --color-gris-claro: #E8E8E8;;
     --color-gris: #495057;
     --color-gris-oscuro: #343A40;
 
@@ -17,8 +18,21 @@
 
 body{
     background: var(--color-background);
-    margin: 30px 50px 0 50px;
+    margin: 20px;
 }
+
+h1{
+    position: fixed;
+    
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
 
 input{
     border: none;
@@ -26,6 +40,15 @@ input{
     font-size: 1em;
     font-family: var(--font-principal);
     color: var(--color-primario);
+    margin-top: 6em;
+}
+
+.caja-output{
+    background: var(--color-blanco);
+}
+
+img{
+    width: 80%;
 }
 
 button{
@@ -40,7 +63,7 @@ button{
     color: var(--color-claro);
 }
 
-.desencriptar{
+.desencriptar, .copiar{
     background: var(--color-secundario);
     color: var(--color-primario);
 }
