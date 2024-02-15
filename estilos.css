@@ -17,4 +17,17 @@
 
 body{
     background: var(--color-background);
+    margin: 30px 50px 0 50px;
+}
+
+input{
+    border: none;
+    background: none;
+    font-size: 1em;
+    font-family: var(--font-principal);
+    color: var(--color-primario);
+}
+
+.btn{
+    
 }

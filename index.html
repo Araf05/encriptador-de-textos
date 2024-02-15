@@ -8,29 +8,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 </head>
 <body>
     <header>
         <h1><img src="imagenes/Logo.svg" alt="Logo de Alura"></h1>
     </header>
     <main>
-        <section class="caja-input">
-            <form>
-                <input type="text">
-                <button class="btn encriptar">Encriptar</button>
-                <button class="btn desencriptar">Desencriptar</button>
-            </form>
-        </section>
-        <section class="caja-output">
-            <div class="Sin-ingreso">
-                <img src="imagenes/Muñeco.svg" alt="Ilustración de una persona con una lupa observando un diamante">
-                <h2>Ningún mensaje encontrado</h2>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>
-        </section>
+        <div class="container">
+            <section class="caja-input">
+                <form>
+                    <input type="text" placeholder="Ingrese su texto aquí">
+                    <p><i class="fi fi-sr-exclamation"></i> Solo letras minúsculas y sin acentos</p>
+                    <button class="btn encriptar">Encriptar</button>
+                    <button class="btn desencriptar">Desencriptar</button>
+                </form>
+            </section>
+            <section class="caja-output">
+                <div class="Sin-ingreso">
+                    <img src="imagenes/Muñeco.svg" alt="Ilustración de una persona con una lupa observando un diamante">
+                    <h2>Ningún mensaje encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer>
-        <p>Github  Linkedin ...</p>
-    </footer>
 </body>
 </html>
