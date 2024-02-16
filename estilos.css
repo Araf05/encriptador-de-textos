@@ -24,6 +24,7 @@ body{
 h1{
     position: fixed;
     margin: 20px;
+    width: 48px;
 }
 
 main{
@@ -35,13 +36,14 @@ main{
 }
 
 .caja-input{
-
+    width: 100%;
 }
 
 #texto-ingresado{
+    width: 100%;
     border: none;
     background: none;
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: var(--font-principal);
     color: var(--color-primario);
     margin-top: 6em;
