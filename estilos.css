@@ -8,6 +8,7 @@
     --color-gris-claro: #E8E8E8;;
     --color-gris: #495057;
     --color-gris-oscuro: #343A40;
+    --color-icon: #67808E;
 
     --font-principal: "Inter", sans-serif;
 }
@@ -47,6 +48,15 @@ main{
     font-family: var(--font-principal);
     color: var(--color-primario);
     margin-top: 6em;
+}
+
+form p{
+    font-family: var(--font-principal);
+    color: var(--color-gris);
+}
+
+form i{
+    color: var(--color-icon);
 }
 
 .caja-output{
