@@ -38,10 +38,10 @@ main{
 
 }
 
-input{
+#texto-ingresado{
     border: none;
     background: none;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: var(--font-principal);
     color: var(--color-primario);
     margin-top: 6em;
