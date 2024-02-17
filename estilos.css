@@ -44,8 +44,7 @@ main{
     width: 100%;
     border: none;
     background: none;
-    font-size: 2em;
-    font-family: var(--font-principal);
+    font: normal 1.8em var(--font-principal);
     color: var(--color-primario);
     margin-top: 4em;
     resize: none;
@@ -62,7 +61,7 @@ main{
 form p{
     font-family: var(--font-principal);
     color: var(--color-gris);
-    margin: 1em auto 0 auto;
+    margin: 1em auto 0;
 }
 
 form i{
@@ -77,9 +76,8 @@ form i{
 button {
     width: 100%;
     padding: 1em;
-    border-radius: 1em;
-    font-size: 1.2em;
-    font-family: var(--font-principal);
+    border-radius: 1.5em;
+    font: normal 1.2em var(--font-principal);
     border: 1px solid var(--color-primario);
     margin: 0.5em auto;
 }
@@ -101,10 +99,23 @@ button {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    border-radius: 1.5em;
+    padding: 2em;
+    margin: 3em auto 0;
 }
 
-img{
+.muñeco{
     width: 50%;
     margin: auto;
+    display: none;
 }
+
+.sin-mensaje{
+    font: 900 1.5em var(--font-principal);
+    color: var(--color-gris-oscuro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 
