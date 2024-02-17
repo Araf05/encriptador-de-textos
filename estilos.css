@@ -47,7 +47,7 @@ main{
     font-size: 2em;
     font-family: var(--font-principal);
     color: var(--color-primario);
-    margin-top: 5em;
+    margin-top: 4em;
     resize: none;
 }
 
@@ -62,10 +62,37 @@ main{
 form p{
     font-family: var(--font-principal);
     color: var(--color-gris);
+    margin: 1em auto 0 auto;
 }
 
 form i{
     color: var(--color-icon);
+}
+
+.caja-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 100%;
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 1.2em;
+    font-family: var(--font-principal);
+    border: 1px solid var(--color-primario);
+    margin: 0.5em auto;
+}
+
+.encriptar {
+    background: var(--color-primario);
+    color: var(--color-gris-claro);
+}
+
+.desencriptar,
+.copiar {
+    background: var(--color-secundario);
+    color: var(--color-primario);
 }
 
 .caja-output{
@@ -81,26 +108,3 @@ img{
     margin: auto;
 }
 
-.caja-buttons{
-    display: flex;
-    flex-direction: column;
-}
-
-button{
-    width: 100%;
-    padding: 1em;
-    border-radius: 1em;
-    font-size: 1em;
-    border: 1px solid var(--color-primario);
-    margin: 0.5em auto;
-}
-
-.encriptar{
-    background: var(--color-primario);
-    color: var(--color-gris-claro);
-}
-
-.desencriptar, .copiar{
-    background: var(--color-secundario);
-    color: var(--color-primario);
-}
