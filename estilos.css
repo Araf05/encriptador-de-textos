@@ -113,9 +113,15 @@ button {
 .sin-mensaje{
     font: 900 1.5em var(--font-principal);
     color: var(--color-gris-oscuro);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    margin: 0 0 1em;
+}
+
+.solucion{
+    font: 1em var(--font-principal);
+}
+
+.copiar{
+    margin: 1.5em auto 0;
 }
 
 
