@@ -89,7 +89,7 @@ button {
 
 .desencriptar,
 .copiar {
-    background: var(--color-secundario);
+    background: none;
     color: var(--color-primario);
 }
 
