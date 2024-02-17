@@ -47,7 +47,16 @@ main{
     font-size: 2em;
     font-family: var(--font-principal);
     color: var(--color-primario);
-    margin-top: 6em;
+    margin-top: 5em;
+    resize: none;
+}
+
+#texto-ingresado::placeholder{
+    color: var(--color-primario);
+}
+
+#texto-ingresado:focus-visible{
+    outline: none;
 }
 
 form p{
