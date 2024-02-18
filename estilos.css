@@ -73,6 +73,15 @@ form i{
     flex-direction: column;
 }
 
+@media (min-width: 500px) {
+    .caja-buttons {
+        width: 100%;
+        flex-direction: row;
+        gap: 1em;
+        justify-content: space-between;
+    }
+}
+
 button {
     width: 100%;
     padding: 1em;
@@ -81,6 +90,7 @@ button {
     border: 1px solid var(--color-primario);
     margin: 0.5em auto;
 }
+
 
 .encriptar {
     background: var(--color-primario);
@@ -103,6 +113,8 @@ button {
     padding: 2em;
     margin: 3em auto 0;
 }
+
+
 
 .muñeco{
     width: 50%;
