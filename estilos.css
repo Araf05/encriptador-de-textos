@@ -138,6 +138,7 @@ button {
     border-radius: 1.5em;
     padding: 1em;
     margin: auto;
+    box-shadow: var(--color-secundario) 0 24px 32px -8px;
 }
 
 .muñeco{
