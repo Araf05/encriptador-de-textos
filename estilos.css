@@ -23,11 +23,16 @@ body{
 }
 
 header{
-    width: 100%;
     margin: 1.5em 1em;
 }
 h1{
     width: 2em;
+}
+
+@media (min-width: 1000px) {
+    header{
+        position: absolute;
+    }
 }
 
 main{
@@ -139,8 +144,9 @@ button {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: space-around;
-    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
     border-radius: 1.5em;
     padding: 1em;
     box-shadow: var(--color-secundario) 0 24px 32px -8px;
@@ -149,14 +155,20 @@ button {
 @media (min-width: 1000px) {
     .caja-output{
         width: 30%;
-        height: 80%;
+        height: 90vh;
+        margin-top: 3em;
     }
 }
 
 .muñeco{
-    width: 50%;
-    margin: auto;
+    width: 90%;
     display: none;
+}
+
+@media (min-width: 1000px) {
+    .muñeco{
+        display: block;
+    }
 }
 
 .sin-mensaje{
