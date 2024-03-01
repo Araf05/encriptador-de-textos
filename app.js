@@ -2,5 +2,5 @@ let textoInput;
 
 function encriptar(){
    textoInput = document.getElementById('texto-ingresado').value;
-   alert(textoInput);
+   console.log(textoInput);
 }
