@@ -15,12 +15,8 @@ const matriz_codigo = [
 
 function btnEncriptar(){
    const texto_Encriptado = encriptar(texto_Input.value);
-   texto_info.style = 'display: none;';
    mensaje.innerHTML = texto_Encriptado;
-   mensaje.style = 'color: var(--color-icon);';
-   muñeco.style = 'display: none;';
-   caja_output.style = 'align-items: flex-start; justify-content: space-between;';
-   btn_copiar.style = 'display: block;';
+   estilosEncriptar();
    console.log(texto_Encriptado);
 }
 
@@ -34,5 +30,13 @@ function encriptar(frase){
       }
    }
    return frase;
+}
+
+function estilosEncriptar(){
+   texto_info.style = 'display: none;';
+   mensaje.style = 'color: var(--color-icon);';
+   muñeco.style = 'display: none;';
+   caja_output.style = 'align-items: flex-start; justify-content: space-between;';
+   btn_copiar.style = 'display: block;';
 }
 
