@@ -8,7 +8,7 @@
     --color-gris-claro: #E8E8E8;;
     --color-gris: #495057;
     --color-gris-oscuro: #343A40;
-    --color-icon: #67808E;
+    --color-celeste: #67808E;
 
     --font-principal: "Inter", sans-serif;
 }
@@ -75,23 +75,26 @@ main{
     }
 }
 
-#texto-ingresado{
+.area-texto{
     width: 100%;
-    height: 60%;
     border: none;
     padding: 0;
     background: none;
-    font: normal 1.8em var(--font-principal);
-    color: var(--color-primario);
     resize: none;
+}
+
+.area-texto:focus-visible {
+    outline: none;
+}
+
+#texto-ingresado{
+    height: 60%;
+    font: normal 1.8em var(--font-principal);
+    color: var(--color-primario);   
 }
 
 #texto-ingresado::placeholder{
     color: var(--color-primario);
-}
-
-#texto-ingresado:focus-visible{
-    outline: none;
 }
 
 .caja-alert-buttons{
@@ -109,7 +112,7 @@ form p{
 }
 
 i{
-    color: var(--color-icon);
+    color: var(--color-celeste);
 }
 
 .caja-buttons {
@@ -190,6 +193,7 @@ button {
 }
 
 .mensaje{
+    display: block;
     font: 900 1.3em var(--font-principal);
     color: var(--color-gris-oscuro);
 }
@@ -201,6 +205,12 @@ button {
 .copiar{
     display: none;
     margin: 0 auto;
+}
+
+#solucion{
+    display: none;
+    color: var(--color-celeste);
+    font: normal 1.5em var(--font-principal);
 }
 
 

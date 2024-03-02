@@ -1,9 +1,10 @@
-const texto_Input = document.getElementById('texto-ingresado');
-const texto_info = document.querySelector('p.info');
-const mensaje = document.querySelector('p.mensaje');
-const muñeco = document.querySelector('img.muñeco');
-const caja_output = document.querySelector('section.caja-output');
-const btn_copiar = document.querySelector('button.copiar');
+const texto_Input = document.getElementById('texto-ingresado'),
+      texto_Output = document.getElementById('solucion'),
+      p_info = document.querySelector('p.info'),
+      mensaje = document.querySelector('p.mensaje'),
+      muñeco = document.querySelector('img.muñeco'),
+      caja_output = document.querySelector('section.caja-output'),
+      btn_copiar = document.querySelector('button.copiar');
 
 const matriz_codigo = [
    ["a", "ai"],
@@ -15,7 +16,7 @@ const matriz_codigo = [
 
 function btnEncriptar(){
    const texto_Encriptado = encriptar(texto_Input.value);
-   mensaje.innerHTML = texto_Encriptado;
+   solucion.innerHTML = texto_Encriptado;
    estilosEncriptar();
    console.log(texto_Encriptado);
 }
@@ -33,13 +34,15 @@ function encriptar(frase){
 }
 
 function estilosEncriptar(){
-   texto_info.style = 'display: none;';
-   mensaje.style = 'color: var(--color-icon);';
+   p_info.style = 'display: none;';
+   mensaje.style = 'display: none;';
+   texto_Output.style = 'display: block;';
    muñeco.style = 'display: none;';
    caja_output.style = 'align-items: flex-start; justify-content: space-between;';
    btn_copiar.style = 'display: block;';
 }
 
 function btnCopiar(){
-   
+   texto_Output.select();
+   document.execCommand('copy');
 }
