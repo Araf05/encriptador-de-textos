@@ -55,7 +55,7 @@ main{
     .container{
         flex-direction: row;
         padding-left: 90px;
-        margin-top: 2em;
+        margin-top: 1.5em;
     }
 }
 
@@ -66,6 +66,13 @@ main{
     flex-direction: column;
     justify-content: space-between;
     gap: 0.5em;
+}
+
+@media (min-width: 1000px) {
+    .caja-input{
+        height: 80vh;
+        padding: 2em 0 0 0;
+    }
 }
 
 #texto-ingresado{
@@ -130,7 +137,7 @@ i{
 
 button {
     width: 100%;
-    max-width: 332px;
+    
     padding: 1em;
     border-radius: 1.5em;
     font: normal 1em var(--font-principal);
@@ -157,9 +164,9 @@ button {
     text-align: center;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
     border-radius: 1.5em;
-    padding: 1em;
+    padding: 2em;
     box-shadow: var(--color-secundario) 0 24px 32px -8px;
 }
 
