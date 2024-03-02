@@ -4,7 +4,8 @@ const texto_Input = document.getElementById('texto-ingresado'),
       mensaje = document.querySelector('p.mensaje'),
       muñeco = document.querySelector('img.muñeco'),
       caja_output = document.querySelector('section.caja-output'),
-      btn_copiar = document.querySelector('button.copiar');
+      btn_copiar = document.querySelector('button.copiar'),
+      btn_encriptar = document.querySelector('button.encriptar');
 
 const matriz_codigo = [
    ["a", "ai"],
@@ -14,12 +15,12 @@ const matriz_codigo = [
    ["u", "ufat"],
 ];
 
-function btnEncriptar(){
+btn_encriptar.addEventListener('click', () => {
    const texto_Encriptado = encriptar(texto_Input.value);
    solucion.innerHTML = texto_Encriptado;
-   estilosEncriptar();
+   estilosEncriptado();
    console.log(texto_Encriptado);
-}
+})
 
 function encriptar(frase){
    for(let i=0; i<matriz_codigo.length; i++){
@@ -33,7 +34,7 @@ function encriptar(frase){
    return frase;
 }
 
-function estilosEncriptar(){
+function estilosEncriptado(){
    p_info.style = 'display: none;';
    mensaje.style = 'display: none;';
    texto_Output.style = 'display: block;';
@@ -42,7 +43,18 @@ function estilosEncriptar(){
    btn_copiar.style = 'display: block;';
 }
 
-function btnCopiar(){
-   texto_Output.select();
-   document.execCommand('copy');
+function estilosInicio(){
+   p_info.style = 'display: block;';
+   mensaje.style = 'display: block;';
+   texto_Output.style = 'display: none;';
+   muñeco.style = 'display: block;';
+   caja_output.style = 'align-items: center; justify-content: center;';
+   btn_copiar.style = 'display: none;';
 }
+
+
+btn_copiar.addEventListener('click', async () => {
+   await navigator.clipboard.writeText(solucion.value);
+   estilosInicio();
+   alert('Copiado!');
+})
