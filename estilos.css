@@ -29,7 +29,7 @@ h1{
     width: 2em;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
     header{
         position: absolute;
     }
@@ -50,7 +50,7 @@ main{
     gap: 1em;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
     .container{
         flex-direction: row;
         padding-left: 90px;
@@ -110,7 +110,7 @@ i{
     gap: 1em;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
     .caja-buttons {
         width: 100%;
         max-width: 688px;
@@ -120,7 +120,7 @@ i{
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
     .caja-buttons {
         width: 100%;
         max-width: 680px;
@@ -162,7 +162,7 @@ button {
     box-shadow: var(--color-secundario) 0 24px 32px -8px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
     .caja-output{
         width: 30%;
         min-width: 400px;
@@ -175,18 +175,18 @@ button {
     display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
     .muñeco{
         display: block;
     }
 }
 
-.sin-mensaje{
+.mensaje{
     font: 900 1.3em var(--font-principal);
     color: var(--color-gris-oscuro);
 }
 
-.solucion{
+.info{
     font: 1em var(--font-principal);
 }
 
