@@ -42,6 +42,7 @@ function estilosSolucion(){
    muñeco.style = 'display: none;';
    caja_output.style = 'align-items: flex-start; justify-content: space-between;';
    btn_copiar.style = 'display: block;';
+   texto_Input.value= '';
 }
 
 function estilosInicio(){
