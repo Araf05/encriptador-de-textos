@@ -80,3 +80,15 @@ function desencriptar(frase){
    }
    return frase;
 }
+
+// validaciones:
+
+function validarMayus(){
+   texto_Input.addEventListener('keyup', (event) => {
+      let texto = event.target.value;
+      console.log(texto);
+      
+   })
+}
+
+validarMayus();
