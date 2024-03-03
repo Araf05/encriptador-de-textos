@@ -5,12 +5,13 @@ const texto_Input = document.getElementById('texto-ingresado'),
       muñeco = document.querySelector('img.muñeco'),
       caja_output = document.querySelector('section.caja-output'),
       btn_copiar = document.querySelector('button.copiar'),
-      btn_encriptar = document.querySelector('button.encriptar');
+      btn_encriptar = document.querySelector('button.encriptar'),
+      btn_desencriptar = document.querySelector('button.desencriptar');
 
 const matriz_codigo = [
-   ["a", "ai"],
    ["e", "enter"],
    ["i", "imes"],
+   ["a", "ai"],
    ["o", "ober"],
    ["u", "ufat"],
 ];
@@ -18,7 +19,7 @@ const matriz_codigo = [
 btn_encriptar.addEventListener('click', () => {
    const texto_Encriptado = encriptar(texto_Input.value);
    solucion.innerHTML = texto_Encriptado;
-   estilosEncriptado();
+   estilosSolucion();
    console.log(texto_Encriptado);
 })
 
@@ -34,7 +35,7 @@ function encriptar(frase){
    return frase;
 }
 
-function estilosEncriptado(){
+function estilosSolucion(){
    p_info.style = 'display: none;';
    mensaje.style = 'display: none;';
    texto_Output.style = 'display: block;';
@@ -58,3 +59,23 @@ btn_copiar.addEventListener('click', async () => {
    estilosInicio();
    alert('Copiado!');
 })
+
+
+btn_desencriptar.addEventListener('click', () => {
+   const texto_Desencriptado = desencriptar(texto_Input.value);
+   solucion.innerHTML = texto_Desencriptado;
+   estilosSolucion();
+   console.log(texto_Desencriptado);
+})
+
+function desencriptar(frase){
+   for(let i=0; i<matriz_codigo.length; i++){
+      if(frase.includes(matriz_codigo[i][1])){
+         frase = frase.replaceAll(
+            matriz_codigo[i][1], 
+            matriz_codigo[i][0]
+            )
+      }
+   }
+   return frase;
+}
