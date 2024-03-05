@@ -20,7 +20,6 @@ btn_encriptar.addEventListener('click', () => {
    const texto_Encriptado = encriptar(texto_Input.value);
    solucion.innerHTML = texto_Encriptado;
    estilosSolucion();
-   console.log(texto_Encriptado);
 })
 
 function encriptar(frase){
@@ -66,7 +65,6 @@ btn_desencriptar.addEventListener('click', () => {
    const texto_Desencriptado = desencriptar(texto_Input.value);
    solucion.innerHTML = texto_Desencriptado;
    estilosSolucion();
-   console.log(texto_Desencriptado);
 })
 
 function desencriptar(frase){
@@ -83,12 +81,19 @@ function desencriptar(frase){
 
 // validaciones:
 
-function validarMayus(){
-   texto_Input.addEventListener('keyup', (event) => {
-      let texto = event.target.value;
-      console.log(texto);
-      
-   })
+const expresiones = {
+   regex1 : /[A-ZÀ-ÿ]/
 }
 
-validarMayus();
+const validar = (e) => {
+   if(expresiones.regex1.test(e.target.value)){
+      console.log('solo minusculas y sin acentos');
+   }
+}
+
+function validarInput() {
+   texto_Input.addEventListener('keyup', validar);
+   texto_Input.addEventListener('blur', validar);
+}
+
+validarInput();
