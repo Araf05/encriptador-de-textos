@@ -97,6 +97,18 @@ main{
     color: var(--color-primario);
 }
 
+.validacion{
+    width: 100%;    
+}
+
+#error-mayus, #error-vacio{
+    font: bold 1em var(--font-principal);
+    padding: 1em;
+    display: none;
+    background: red;
+    color: var(--color-blanco);
+}
+
 .caja-alert-buttons{
     width: 100%;
     display: flex;

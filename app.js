@@ -86,8 +86,12 @@ const expresiones = {
 }
 
 const validar = (e) => {
+   let alert = document.getElementById('error-mayus');
    if(expresiones.regex1.test(e.target.value)){
+      alert.style = 'display: block;';
       console.log('solo minusculas y sin acentos');
+   } else {
+      alert.style = 'display: none;';
    }
 }
 
