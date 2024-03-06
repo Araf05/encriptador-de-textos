@@ -233,6 +233,7 @@ button {
 }
 
 #solucion{
+    height: 100%;
     display: none;
     color: var(--color-celeste);
     font: normal 1.5em var(--font-principal);
