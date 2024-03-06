@@ -6,7 +6,9 @@ const texto_Input = document.getElementById('texto-ingresado'),
       caja_output = document.querySelector('section.caja-output'),
       btn_copiar = document.querySelector('button.copiar'),
       btn_encriptar = document.querySelector('button.encriptar'),
-      btn_desencriptar = document.querySelector('button.desencriptar');
+      btn_desencriptar = document.querySelector('button.desencriptar'),
+      error_mayus = document.getElementById('error-mayus'),
+      error_vacio = document.getElementById('error_vacio');
 
 const matriz_codigo = [
    ["e", "enter"],
@@ -15,6 +17,7 @@ const matriz_codigo = [
    ["o", "ober"],
    ["u", "ufat"],
 ];
+
 
 btn_encriptar.addEventListener('click', () => {
    const texto_Encriptado = encriptar(texto_Input.value);
@@ -82,22 +85,27 @@ function desencriptar(frase){
 // validaciones:
 
 const expresiones = {
-   regex1 : /[A-ZÀ-ÿ]/
+   regex1 : /[A-ZÀ-ÿ]/,
+   regex2 : /^\s$/
 }
 
-const validar = (e) => {
-   let alert = document.getElementById('error-mayus');
-   if(expresiones.regex1.test(e.target.value)){
-      alert.style = 'display: block;';
-      console.log('solo minusculas y sin acentos');
+function validarMayus() {
+   if(expresiones.regex1.test(texto_Input.value)){
+      error_mayus.style = 'display: block;';
+      estilosError();
    } else {
-      alert.style = 'display: none;';
+      error_mayus.style = 'display: none;';
+      estilosCorrecto(); 
    }
 }
 
-function validarInput() {
-   texto_Input.addEventListener('keyup', validar);
-   texto_Input.addEventListener('blur', validar);
+
+function estilosError() {
+   btn_encriptar.classList.add('deshabilitado');
+   btn_desencriptar.classList.add('deshabilitado');
 }
 
-validarInput();
+function estilosCorrecto() {
+   btn_encriptar.classList.remove('deshabilitado');
+   btn_desencriptar.classList.remove('deshabilitado');
+}

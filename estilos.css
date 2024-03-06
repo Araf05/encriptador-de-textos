@@ -152,11 +152,12 @@ i{
 
 button {
     width: 100%;
-    
     padding: 1em;
     border-radius: 1.5em;
     font: normal 1em var(--font-principal);
     border: 1px solid var(--color-primario);
+    pointer-events: visible;
+    cursor: pointer;
 }
 
 
@@ -169,6 +170,18 @@ button {
 .copiar {
     background: none;
     color: var(--color-primario);
+}
+
+.deshabilitado {
+    background: var(--color-background);
+    color: red;
+    border: 1px solid red;
+    pointer-events: none;
+}
+
+.encriptar:hover, .desencriptar:hover, .copiar:hover{
+    font: bold 1em var(--font-principal);
+    border: 2px solid var(--color-gris-oscuro);
 }
 
 .caja-output{
