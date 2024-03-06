@@ -9,6 +9,7 @@ const texto_Input = document.getElementById('texto-ingresado'),
       btn_desencriptar = document.querySelector('button.desencriptar'),
       error_mayus = document.getElementById('error-mayus'),
       error_vacio = document.getElementById('error-vacio');
+let error = false;
 
 const matriz_codigo = [
    ["e", "enter"],
@@ -20,9 +21,14 @@ const matriz_codigo = [
 
 
 btn_encriptar.addEventListener('click', () => {
-   const texto_Encriptado = encriptar(texto_Input.value);
-   solucion.innerHTML = texto_Encriptado;
-   estilosSolucion();
+      if(error) {
+         const texto_Encriptado = encriptar(texto_Input.value);
+         solucion.innerHTML = texto_Encriptado;
+         estilosSolucion();
+      } else {
+         error_vacio.style = 'display: block;';
+         estilosError();
+      }
 })
 
 function encriptar(frase){
@@ -65,9 +71,14 @@ btn_copiar.addEventListener('click', async () => {
 
 
 btn_desencriptar.addEventListener('click', () => {
-   const texto_Desencriptado = desencriptar(texto_Input.value);
-   solucion.innerHTML = texto_Desencriptado;
-   estilosSolucion();
+   if(error){
+      const texto_Desencriptado = desencriptar(texto_Input.value);
+      solucion.innerHTML = texto_Desencriptado;
+      estilosSolucion();
+   } else {
+      error_vacio.style = 'display: block;';
+      estilosError();
+   }
 })
 
 function desencriptar(frase){
@@ -86,11 +97,11 @@ function desencriptar(frase){
 
 const expresiones = {
    regex1 : /[A-ZÀ-ÿ]/,
-   regex2 : /^\s+/
+   regex2 : /^\s+$/
 }
 
 function validar() {
-   let error = false;
+   error = false;
 
    if(expresiones.regex1.test(texto_Input.value)){
       error_vacio.style = 'display: none;';
@@ -111,7 +122,7 @@ function validar() {
       error_mayus.style = 'display: none;';
       estilosCorrecto(); 
    }
-
+   return error;
 }
 
 
