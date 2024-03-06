@@ -8,7 +8,7 @@ const texto_Input = document.getElementById('texto-ingresado'),
       btn_encriptar = document.querySelector('button.encriptar'),
       btn_desencriptar = document.querySelector('button.desencriptar'),
       error_mayus = document.getElementById('error-mayus'),
-      error_vacio = document.getElementById('error_vacio');
+      error_vacio = document.getElementById('error-vacio');
 
 const matriz_codigo = [
    ["e", "enter"],
@@ -86,17 +86,32 @@ function desencriptar(frase){
 
 const expresiones = {
    regex1 : /[A-ZÀ-ÿ]/,
-   regex2 : /^\s$/
+   regex2 : /^\s+/
 }
 
-function validarMayus() {
+function validar() {
+   let error = false;
+
    if(expresiones.regex1.test(texto_Input.value)){
+      error_vacio.style = 'display: none;';
+      error = true;
       error_mayus.style = 'display: block;';
       estilosError();
    } else {
       error_mayus.style = 'display: none;';
+      if(texto_Input.value == "" || expresiones.regex2.test(texto_Input.value) ){
+         error = true;
+         error_vacio.style = 'display: block;';
+         estilosError();
+      }
+   } 
+   
+   if(!error){
+      error_vacio.style = 'display: none;';
+      error_mayus.style = 'display: none;';
       estilosCorrecto(); 
    }
+
 }
 
 
@@ -109,3 +124,4 @@ function estilosCorrecto() {
    btn_encriptar.classList.remove('deshabilitado');
    btn_desencriptar.classList.remove('deshabilitado');
 }
+
