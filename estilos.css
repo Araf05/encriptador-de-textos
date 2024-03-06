@@ -186,6 +186,7 @@ button {
 
 .caja-output{
     width: 100%;
+    height: auto;
     background: var(--color-blanco);  
     display: flex;
     flex-direction: column;

@@ -9,7 +9,9 @@ const texto_Input = document.getElementById('texto-ingresado'),
       btn_desencriptar = document.querySelector('button.desencriptar'),
       error_mayus = document.getElementById('error-mayus'),
       error_vacio = document.getElementById('error-vacio');
-let error = false;
+
+let sizeScreen = window.innerWidth;
+
 
 const matriz_codigo = [
    ["e", "enter"],
@@ -21,7 +23,7 @@ const matriz_codigo = [
 
 
 btn_encriptar.addEventListener('click', () => {
-      if(error) {
+      if(texto_Input.value != "") {
          const texto_Encriptado = encriptar(texto_Input.value);
          solucion.innerHTML = texto_Encriptado;
          estilosSolucion();
@@ -57,9 +59,12 @@ function estilosInicio(){
    p_info.style = 'display: block;';
    mensaje.style = 'display: block;';
    texto_Output.style = 'display: none;';
-   muñeco.style = 'display: block;';
    caja_output.style = 'align-items: center; justify-content: center;';
    btn_copiar.style = 'display: none;';
+   if( sizeScreen >= 1000){
+      muñeco.style = 'display: block;';
+   }
+   
 }
 
 
@@ -71,7 +76,7 @@ btn_copiar.addEventListener('click', async () => {
 
 
 btn_desencriptar.addEventListener('click', () => {
-   if(error){
+   if(texto_Input.value != ""){
       const texto_Desencriptado = desencriptar(texto_Input.value);
       solucion.innerHTML = texto_Desencriptado;
       estilosSolucion();
@@ -101,7 +106,7 @@ const expresiones = {
 }
 
 function validar() {
-   error = false;
+   let error = false;
 
    if(expresiones.regex1.test(texto_Input.value)){
       error_vacio.style = 'display: none;';
@@ -122,7 +127,6 @@ function validar() {
       error_mayus.style = 'display: none;';
       estilosCorrecto(); 
    }
-   return error;
 }
 
 
