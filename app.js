@@ -69,7 +69,7 @@ function estilosInicio(){
 
 function solucionVacio() {
    if(texto_Output.value == "" || expresiones.regex2.test(texto_Output.value)){
-      estilosInicio();
+      location.reload();
    } 
 }
 
