@@ -10,7 +10,8 @@ const texto_Input = document.getElementById('texto-ingresado'),
       error_mayus = document.getElementById('error-mayus'),
       error_vacio = document.getElementById('error-vacio');
 
-let sizeScreen = window.innerWidth;
+let sizeScreen = window.innerWidth,
+    solucion_vacio = false;
 
 
 const matriz_codigo = [
@@ -67,9 +68,22 @@ function estilosInicio(){
    
 }
 
+function validarCopiar(){
+   if(texto_Output.value != ""){
+      solucion_vacio = false;
+   } else {
+      solucion_vacio= true;  
+   }
+
+   if(solucion_vacio){
+      btn_copiar.classList.add('deshabilitado');
+   } else {
+      btn_copiar.classList.remove('deshabilitado');
+   }
+}
 
 btn_copiar.addEventListener('click', async () => {
-   await navigator.clipboard.writeText(solucion.value);
+   await navigator.clipboard.writeText(texto_Output.value);
    estilosInicio();
    alert('Copiado!');
 })
