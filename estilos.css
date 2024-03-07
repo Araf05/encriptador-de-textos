@@ -165,12 +165,14 @@ button {
 .encriptar {
     background: var(--color-primario);
     color: var(--color-gris-claro);
+    transition: all 0.5s ease;
 }
 
 .desencriptar,
 .copiar {
     background: none;
     color: var(--color-primario);
+    transition: all 0.5s ease;
 }
 
 .deshabilitado {
@@ -181,8 +183,10 @@ button {
 }
 
 .encriptar:hover, .desencriptar:hover, .copiar:hover{
+    background: rgb(16, 194, 16);
+    color: var(--color-blanco);
     font: bold 1em var(--font-principal);
-    border: 2px solid var(--color-gris-oscuro);
+    border: none;
 }
 
 .caja-output{
