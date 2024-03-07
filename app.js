@@ -10,8 +10,7 @@ const texto_Input = document.getElementById('texto-ingresado'),
       error_mayus = document.getElementById('error-mayus'),
       error_vacio = document.getElementById('error-vacio');
 
-let sizeScreen = window.innerWidth,
-    solucion_vacio = false;
+let sizeScreen = window.innerWidth;
 
 
 const matriz_codigo = [
@@ -24,14 +23,14 @@ const matriz_codigo = [
 
 
 btn_encriptar.addEventListener('click', () => {
-      if(texto_Input.value != "") {
-         const texto_Encriptado = encriptar(texto_Input.value);
-         solucion.innerHTML = texto_Encriptado;
-         estilosSolucion();
-      } else {
-         error_vacio.style = 'display: block;';
-         estilosError();
-      }
+   if(texto_Input.value != "") {
+      const texto_Encriptado = encriptar(texto_Input.value);
+      solucion.innerHTML = texto_Encriptado;
+      estilosSolucion();
+   } else {
+      error_vacio.style = 'display: block;';
+      estilosError();
+   }
 })
 
 function encriptar(frase){
@@ -68,18 +67,10 @@ function estilosInicio(){
    
 }
 
-function validarCopiar(){
-   if(texto_Output.value != ""){
-      solucion_vacio = false;
-   } else {
-      solucion_vacio= true;  
-   }
-
-   if(solucion_vacio){
-      btn_copiar.classList.add('deshabilitado');
-   } else {
-      btn_copiar.classList.remove('deshabilitado');
-   }
+function solucionVacio() {
+   if(texto_Output.value == "" || expresiones.regex2.test(texto_Output.value)){
+      estilosInicio();
+   } 
 }
 
 btn_copiar.addEventListener('click', async () => {
