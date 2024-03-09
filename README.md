@@ -10,7 +10,9 @@
 <br>
 <h2>Capturas de la aplicación</h2>
 <span>
-
+  <img width="960" alt="Encriptador_1" src="https://github.com/Araf05/encriptador-de-textos/assets/126494947/98951302-56e7-434f-b97f-fef09e8dfa3e">
+  <img width="960" alt="Encriptador_2" src="https://github.com/Araf05/encriptador-de-textos/assets/126494947/692b4e23-ebf3-46ca-830f-1ee39cd0ede0">
+  <img width="959" alt="Encriptador_3" src="https://github.com/Araf05/encriptador-de-textos/assets/126494947/f565f438-3378-4abe-8136-56f7f50f36c4">
 </span>
 <br> <br>
 <h2>Github-pages</h2>
