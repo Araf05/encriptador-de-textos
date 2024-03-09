@@ -19,7 +19,7 @@
 <p>Te invito a probar la aplicación: <a href="https://araf05.github.io/encriptador-de-textos/" taget="_blank">Encriptador</a></p>
 <br>
 <h2>Modelo Figma</h2>
-<p>Modelo de Figma proporcionado en el desafío por ONE-Alura Latam: [Modelo Encriptador](https://www.figma.com/file/trP3p5nEh7XUyB3n2bomjP/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica?node-id=0%3A1)</p>
+<p>Modelo de Figma proporcionado en el desafío por ONE-Alura Latam: <a href="https://www.figma.com/file/trP3p5nEh7XUyB3n2bomjP/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica?node-id=0%3A1">Modelo Encriptador</a> </p>
 <br>
 <hr>
 <p>Creado por Araceli Noemí Fernández - <a href="https://github.com/Araf05">https://github.com/Araf05</a></p>
