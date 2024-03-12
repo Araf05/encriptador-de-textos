@@ -252,35 +252,41 @@ footer{
     text-align: center;
     margin-top: 3em;
     padding: 1em;
-    background: var(--color-celeste);
+    background: var(--color-primario);
 }
 
 @media (min-width: 1000px) {
     footer{
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 }
 
 #nombre{
     font: normal 1em var(--font-principal);
-    color: var(--color-background);
+    color: var(--color-gris-claro);
 }
 
 #logos{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin: .5em 0 0 0;
+    justify-content: center;
+    gap: 5em;
+    margin: 2em 0 0 0;
 }
 
 @media (min-width: 1000px) {
     #logos{
-        gap: 2em;
+        margin: 0;
     }
 }
 
+#logos a{
+    text-decoration: none;
+}
+
 #logos i{
-    color: var(--color-background);
-    font-size: 1.5em;
+    color: var(--color-secundario);
+    font-size: 2em;
 }
