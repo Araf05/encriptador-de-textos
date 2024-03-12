@@ -245,4 +245,42 @@ button {
     font: normal 1.5em var(--font-principal);
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3em;
+    padding: 1em;
+    background: var(--color-celeste);
+}
 
+@media (min-width: 1000px) {
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+#nombre{
+    font: normal 1em var(--font-principal);
+    color: var(--color-background);
+}
+
+#logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: .5em 0 0 0;
+}
+
+@media (min-width: 1000px) {
+    #logos{
+        gap: 2em;
+    }
+}
+
+#logos i{
+    color: var(--color-background);
+    font-size: 1.5em;
+}
