@@ -92,7 +92,7 @@ btn_desencriptar.addEventListener('click', () => {
 })
 
 function desencriptar(frase){
-   for(let i=0; i<matriz_codigo.length; i++){
+   for(let i=matriz_codigo.length-1; i>=0; i--){
       if(frase.includes(matriz_codigo[i][1])){
          frase = frase.replaceAll(
             matriz_codigo[i][1], 
